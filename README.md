@@ -1,6 +1,6 @@
 Live Demo: 🔗 https://smart-bookmark-supabase-ten.vercel.app/
 
-GitHub Repo: 🔗 [Your GitHub URL Here]
+GitHub Repo: 🔗 https://github.com/Nitish-Kumarrr/smart-bookmark-supabase
 
  **Features**
  
