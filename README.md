@@ -1,4 +1,5 @@
-Live Demo: 🔗 [Your Vercel URL Here]
+Live Demo: 🔗 https://smart-bookmark-supabase-ten.vercel.app/
+
 GitHub Repo: 🔗 [Your GitHub URL Here]
 
  **Features**
