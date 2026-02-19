@@ -74,7 +74,7 @@ export async function signInWithGoogle() {
     //     access_type: "offline",
     //     prompt: "consent",
     //   },
-      redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/dashboard`
+      redirectTo: `${window.location.origin}/dashboard`
     },
   });
 
