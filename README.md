@@ -1,1 +1,1 @@
-# smart-booking-supabase
+# smart-bookmark-app using supabase
