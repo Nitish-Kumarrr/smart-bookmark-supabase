@@ -2,6 +2,7 @@ Live Demo: 🔗 [Your Vercel URL Here]
 GitHub Repo: 🔗 [Your GitHub URL Here]
 
  **Features**
+ 
 Authentication,
 Email & Password login,
 Google OAuth login,
@@ -20,11 +21,13 @@ Filter by favorites,
 Real-time sync across tabs,
 
 **Realtime Updates**
+
 Supabase Realtime subscription,
 Changes reflect instantly without refresh,
 Works across multiple browser tabs,
 
 **Modern UI**
+
 Built with Tailwind CSS,
 Designed using shadcn/ui components,
 Responsive layout,
