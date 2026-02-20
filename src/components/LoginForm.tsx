@@ -25,13 +25,16 @@ export function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault(); // 🔥 IMPORTANT
+    e.preventDefault(); 
     setErrorMsg("");
+    setLoading(true);
 
     if (!email || !password) {
       setErrorMsg("Email and password required");
+      setLoading(false);
       return;
     }
 
@@ -41,10 +44,11 @@ export function LoginForm() {
     });
 
     if (error) {
+      setLoading
       setErrorMsg(error.message);
       return;
     }
-
+    setLoading(false);
     router.push("/dashboard");
   };
 
@@ -81,8 +85,8 @@ export function LoginForm() {
             {errorMsg && (
               <p className="text-sm text-red-500">{errorMsg}</p>
             )}
-            <Button type="submit" className="w-full">
-              Login
+            <Button type="submit" className="w-full" disabled={loading}>
+              {loading ? "Logging in..." : "Login"}
             </Button>
           </div>
         </form>

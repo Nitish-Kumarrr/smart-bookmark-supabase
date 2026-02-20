@@ -22,7 +22,7 @@ export async function login(formData: FormData) {
   }
 
   revalidatePath("/", "layout");
-  redirect("/");
+  redirect("/dashboard");
 }
 
 export async function signup(formData: FormData) {
@@ -48,9 +48,10 @@ export async function signup(formData: FormData) {
   if (error) {
     redirect("/error");
   }
+  await supabase.auth.signOut();
 
   revalidatePath("/", "layout");
-  redirect("/");
+  redirect("/login");
 }
 
 export async function signout() {
@@ -65,7 +66,6 @@ export async function signout() {
 }
 
 export async function signInWithGoogle() {
-    console.log("Google login triggered");
   const supabase = await createClient();
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
